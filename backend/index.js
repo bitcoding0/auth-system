@@ -5,8 +5,9 @@ const app = express() ;
 app.use(express.json());
 connectDb();
 
-const authRoute = require('./routes/authRoute');
-app.use('/api/v1/auth', authRoute);
+const authRoutes = require("./routes/authRoutes");
+
+app.use("/api/v1/auth", authRoutes);
 
 
 app.get("/", (req, res) => {
