@@ -1,4 +1,3 @@
-
 const User = require("../model/auth");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
@@ -152,6 +151,35 @@ exports.getUser = async (req, res) => {
     }
 }
 
+// Here Send Email with Reset Password Link
+exports.forgetPassword = async (req, res) => {
+    try {
+
+    }
+    catch(error){
+
+    }
+}
+
+
+// Here Update password with Reset Password Link
+exports.resetPassword = async (req, res) => {
+
+}
+
+
+// Here Update password if user Login 
+exports.updatePassword = async (req, res) => {
+    try{
+
+    }
+    catch(error){
+
+    }
+}
+
+
+// here User Delete Our Account 
 exports.deleteUser = async (req, res) => {
     try{
 
