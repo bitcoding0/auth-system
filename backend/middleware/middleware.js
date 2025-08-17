@@ -28,10 +28,17 @@ exports.authentication = async(req, res, next) => {
     }
 }
 
-
 exports.isUser = async (req, res, next) => {
     try{
 
+        const user = req.user ;
+
+        if(user.accountType !== "User"){
+            return res.status(400).json({
+                success : false,
+                message : "This Route only access buy User..."
+            })
+        }
     }
     catch(error){
         return res.status(500).json({
@@ -45,6 +52,14 @@ exports.isUser = async (req, res, next) => {
 exports.isAdmin = async (req, res, next) => {
     try{
 
+        const user = req.user ;
+
+        if(user.accountType !== "Admin"){
+            return res.status(400).json({
+                success : false,
+                message : "This Route only access buy User..."
+            })
+        }
     }
     catch(error){
         return res.status(500).json({
@@ -58,6 +73,14 @@ exports.isAdmin = async (req, res, next) => {
 exports.isHost = async (req, res, next) => {
     try{
 
+        const user = req.user ;
+
+        if(user.accountType !== "Host"){
+            return res.status(400).json({
+                success : false,
+                message : "This Route only access buy User..."
+            })
+        }
     }
     catch(error){
         return res.status(500).json({
