@@ -9,6 +9,7 @@ const { sendEmail } = require("../utils/sendMail");
 
 exports.signup = async (req, res) => {
     try{
+
         const { name, email, accountType, password, confirmPassword } = req.body;
 
         if(!name || !email || !password || !confirmPassword || !accountType) {

@@ -1,13 +1,17 @@
 import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import { Signup } from './page/Singup'
+import Login from './page/Login'
 
 function App() {
 
   return (
-    <>
-      <div>
-        <h1 className='bg-red-500'>Hello World</h1>
-      </div>
-    </>
+   <div className='bg-[#EBF2FF] min-h-screen'>
+      <Routes>
+        <Route path='/' element={<Signup/>}/>
+        <Route path='/login' element={<Login />} />
+      </Routes>
+   </div>
   )
 }
 
